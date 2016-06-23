@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[Characters]
+(
+	[Id] INT IDENTITY(1,1) PRIMARY KEY, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [OwnerId] NVARCHAR(450) NOT NULL, 
+    [Body] INT NULL, 
+    [Agility] INT NULL, 
+    [Reaction] INT NULL, 
+    [Strength] INT NULL, 
+    [Willpower] INT NULL, 
+    [Logic] INT NULL, 
+    [Intuition] INT NULL, 
+    [Charisma] INT NULL, 
+    [Edge] INT NULL, 
+    [PhysicalInitiativeBonus] INT NULL, 
+    [PhysicalInitiativeDice] INT NULL, 
+    [AstalInitiativeBonus] INT NULL, 
+    [AstalInitiativeDice] INT NULL, 
+    [MatrixInitiativeBonus] INT NULL, 
+    [MatrixInitiativeDice] INT NULL, 
+	[PhysicalTrackBonus] INT NULL,
+	[StunTrackBonus] INT NULL,
+	[PhysicalTrackOffset] INT NULL,
+
+    CONSTRAINT [fk_CharactersOwnerId] FOREIGN KEY ([OwnerId]) REFERENCES [AspNetUsers]([Id]),
+)

@@ -1,0 +1,2 @@
+Shadowrun Combat Manager
+=====
